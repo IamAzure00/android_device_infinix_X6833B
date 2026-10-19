@@ -217,8 +217,7 @@ PRODUCT_PACKAGES += \
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
-    android.hardware.health-service.mediatek-recovery \
-    charger_res_images_vendor
+    android.hardware.health-service.mediatek-recovery
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -550,6 +549,7 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 $(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
+$(call soong_config_set,wpa_supplicant_8,wifi_disable_wpa_version_3,true)
 PRODUCT_PACKAGES += \
     libwifi-hal-wrapper:64 \
     wlan_assistant \
